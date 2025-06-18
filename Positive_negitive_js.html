@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Positive or Negative Number</title>
+        <style>
+            body{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                background-color: black;
+                height:100vh;
+            }
+            .box{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border: 10px solid;
+                border-radius: 35px;
+                width: 500px;
+                height: 200px;
+                animation: coloring 5s ease-in-out infinite;
+                background-color: white;
+            }
+           @keyframes coloring {
+
+            0%{border-color: red;}
+            20%{border-color: pink;}
+            40%{border-color: blue;}
+            60%{border-color: aqua;}
+            80%{border-color: springgreen;}
+            100%{border-color: blueviolet;}
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <script>
+
+            let num = parseInt(window.prompt("Enter the number : "));
+            let container = document.querySelector(".box");
+            if(num > 0){
+                container.innerHTML = `
+                    <h1>This is a Positive number</h1>
+                `;
+            }
+            else if(num<0){
+                container.innerHTML = `
+                    <h1>This is a Negative number</h1>
+                `;
+            }
+            else{
+                container.innerHTML = `
+                    <h1>This is a Zero</h1>
+                `;
+            }
+        </script>
+    </body>
+</html>
