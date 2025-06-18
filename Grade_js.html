@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 100vh;
+        }
+        @keyframes coloring {
+            0%{border-color: red;}
+            20%{border-color: pink;}
+            40%{border-color: blue;}
+            60%{border-color: aqua;}
+            80%{border-color: springgreen;}
+            100%{border-color: blueviolet;}
+        }
+        .box{
+            height: 200px;
+            width:500px;
+            background-color: whitesmoke;
+            border-radius: 35px;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border: 10px solid red ;
+            animation: coloring 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body> 
+    <div class="box"></div>
+    <script >
+        let number= String(window.prompt("Enter your number"));
+        let div_contain=document.querySelector(".box");
+        if(number=="A"){
+            div_contain.innerHTML="<b>Grade is very best</b>"
+        }
+        else if(number=="B"){
+            div_contain.innerHTML="<b>Grade is best</b>"
+        }
+        else if(number=="C"){
+            div_contain.innerHTML="<b>Grade is average</b>"
+        }
+        else if(number=="D"){
+            div_contain.innerHTML="<b>Grade is bad</b>"
+        }
+        else if(number=="E"){
+            div_contain.innerHTML="<b>Grade is very bad</b>"
+        }
+        else if(number=="F"){
+            div_contain.innerHTML="<b>You have failed</b>"
+        }
+
+        else{
+            div_contain.innerHTML="<b>Grade is not available</b>"
+        }
+
+    </script>
+</body>
+</html>
